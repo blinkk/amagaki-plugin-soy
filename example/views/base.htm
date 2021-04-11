@@ -1,0 +1,29 @@
+const htm = require('htm');
+const vhtml = require('vhtml');
+const html = htm.bind(vhtml);
+
+module.exports = function(ctx) {
+    return html`
+        <div>
+            <h1>amagaki-plugin-htm</h1>
+            <h2>Partials</h2>
+            <div>
+                ${ctx.doc.fields.partials.map((partial) => {
+                    return html`
+                        <div>
+                            ${require('./partials/' + partial.partial + '.htm')(partial)}
+                        </div>
+                    `
+                })}
+            </div>
+            <div>
+                <h2>Context</h2>
+            </div>
+            <ul>
+                <li>ctx.doc: ${ctx.doc}</li>
+                <li>ctx.pod: ${ctx.pod}</li>
+                <li>ctx.route: ${ctx.route}</li>
+            </ul>
+        </div>
+    `;
+}

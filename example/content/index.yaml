@@ -1,0 +1,8 @@
+$path: /${doc.basename}/
+$view: /views/base.htm
+
+partials:
+- partial: header
+  logo: Logo
+- partial: main
+- partial: footer

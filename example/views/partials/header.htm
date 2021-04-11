@@ -1,0 +1,14 @@
+const htm = require('htm');
+const vhtml = require('vhtml');
+const html = htm.bind(vhtml);
+
+module.exports = function(ctx) {
+    return html`
+        <div>
+            <div>Header</div>
+            <div>
+                ${JSON.stringify(ctx)}
+            </div>
+        </div>
+    `;
+}
