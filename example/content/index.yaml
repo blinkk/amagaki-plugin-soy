@@ -1,5 +1,5 @@
 $path: /${doc.basename}/
-$view: /views/base.htm
+$view: views.base.main.soy
 
 partials:
 - partial: header

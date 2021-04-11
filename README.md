@@ -1,3 +1,3 @@
-# amagaki-plugin-htm
+# amagaki-plugin-soy
 
-An experimental Amagaki plugin that adds React-like HTM templates.
+An experimental Amagaki plugin that adds Soy templates.

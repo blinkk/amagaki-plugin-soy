@@ -1,0 +1,31 @@
+{namespace views.base}
+
+/** @param partial The partial to render. */
+{template .header}
+    <div>
+        Partial {$partial.partial}
+    </div>
+{/template}
+
+/** @param ctx The rendering context. */
+{template .main}
+    <h1>amagaki-plugin-soy</h1>
+    <h2>Partials</h2>
+    <div>
+        {foreach $partial in $ctx.doc.fields.partials}
+            <div>
+                {call .header}{param partial: $partial /}{/call}
+            </div>
+        {/foreach}
+    </div>
+    <h2>Context</h2>
+    <div>
+        Doc: {$ctx.doc}
+    </div>
+    <div>
+        Pod: {$ctx.pod}
+    </div>
+    <div>
+        Route: {$ctx.route}
+    </div>
+{/template}

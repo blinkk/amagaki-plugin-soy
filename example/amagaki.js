@@ -1,5 +1,5 @@
-const htmPlugin = require('../dist/src/htmPlugin');
+const soyPlugin = require('../dist/src/soyPlugin');
 
 module.exports = function(pod) {
-    htmPlugin.register(pod);
+    soyPlugin.register(pod);
 }
